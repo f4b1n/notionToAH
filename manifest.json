@@ -1,0 +1,28 @@
+{
+  "name": "NotionAPI",
+  "description": "Add Shopping from Notion to AH",
+  "version": "1",
+  "author": "f.peterstorfer@gmail.com",
+  "homepage_url": "https://github.com/f4b1n",
+  "manifest_version": 3,
+  "action": {},
+  "commands": {
+    "Post": {
+      "suggested_key": {
+        "windows": "Ctrl+Shift+Y",
+        "mac": "Command+Shift+Y"},
+      "default": "Ctrl+Shift+Y",
+      "description": "Post to AH"
+    }
+  },
+  "background": {
+  "service_worker": "background.js"
+  },
+  "permissions": ["scripting", "tabs"],
+  "host_permissions": ["https://www.notion.so/*", "https://www.ah.nl/*"],
+  "icons": {
+    "16": "search16.png",
+    "48": "search48.png",
+    "128": "search128.png"
+  }
+}
