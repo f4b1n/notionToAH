@@ -73,6 +73,7 @@ async function functionWrapper() {
     "Dishwasher tablets": ["164919", "1"],
     };
 
+  // fix the emoji items
 
     async function getNotionData () {
         const content = document.getElementsByClassName('notion-page-content')[0].children;
@@ -82,6 +83,7 @@ async function functionWrapper() {
             if (content[x].querySelector('.checkboxSquare')) { // check for unticked eles 
                 let child = content[x].querySelector('.notranslate').innerHTML;
                 if (child.includes('emoji')) { // select the emoji if there is one
+                  // check here for mistakes
                     const regex = /alt="([^"]+)".*?>([^<]+)/g;
                     let altText = regex.exec(child);
                     let text = child.split('<')[0];
